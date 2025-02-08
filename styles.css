@@ -1056,61 +1056,57 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 .nav-links li {
     align-items:right ; /* Adds space between menu items */
 }
-
-
-/* For devices with max-width of 768px */
-
-    
-
-
-@media screen and (max-width: 768px) {
+/*768px*/
+@media (max-width: 768px) {
+    /* Adjust navbar to be full-width on small screens */
     .navbar {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
     }
 
+    .nav-left {
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    /* Stack nav links vertically */
     .nav-links {
-        display: none;
-        flex-direction: column;
+        display: block;
         width: 100%;
-        text-align: right;
-        background-color: #2b2b3c;
-        border-radius: 10px;
         margin-top: 10px;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-   
-    .nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    float: right;
-    margin-right: 10px;
-    
-    }
     .nav-links li {
-        padding: 10px 0;
+        text-align: center;
+        margin: 5px 0;
     }
+
+    /* Adjust font sizes for smaller screens */
     .nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    margin: 0 10px;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #42a5f5;
-}
-
-    .menu-toggle {
-        display: block;
-        font-size: 24px;
-        color: #fff;
-        cursor: pointer;
+        font-size: 14px;
+        padding: 5px 0;
     }
+
+    /* Reduce icon size for smaller screens */
+    .icon, .settings-icon {
+        font-size: 18px;
+    }
+
+    /* Hide path on small screens for simplicity */
+    .nav-left .path {
+        display: none;
+    }
+
+    /* Adjust settings icon animation */
+    .settings-icon {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+
 }
 
 
