@@ -1058,6 +1058,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 
+/* For devices with max-width of 768px */
 @media screen and (max-width: 768px) {
     .navbar {
         display: flex;
@@ -1065,24 +1066,24 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         align-items: center;
         width: 100%;
         text-align: center;
-        padding: 10px 0; /* Add some vertical padding */
-        background-color: #050303; /* Ensure consistent background */
+        padding: 10px 0;
+        background-color: #050303;
     }
 
     .menu-icon {
-        display: block; /* Show menu icon on mobile */
+        display: block;
         font-size: 24px;
         cursor: pointer;
         color: white;
-        margin-bottom: 10px; /* Add spacing below the icon */
+        margin-bottom: 10px;
     }
 
     .nav-links {
-        flex-direction: column; /* Stack links vertically */
+        flex-direction: column;
         align-items: center;
         width: 100%;
-        display: none; /* Hidden by default */
-        padding: 0; /* Reset padding */
+        display: none; /* Initially hidden */
+        padding: 0;
     }
 
     .nav-links.show {
@@ -1090,21 +1091,21 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     }
 
     .nav-links li {
-        list-style: none; /* Remove bullet points */
-        margin: 10px 0; /* Add vertical spacing between links */
+        list-style: none;
+        margin: 10px 0;
     }
 
     .nav-links li a {
         text-decoration: none;
         color: #ffffff;
-        font-size: 18px; /* Slightly larger font for better readability */
+        font-size: 18px; /* Readable font size */
         font-weight: 600;
-        text-align: center; /* Center-align text */
+        text-align: center;
         transition: color 0.3s;
     }
 
     .nav-links li a:hover {
-        color: #42a5f5; /* Highlight effect on hover */
+        color: #42a5f5; /* Highlight effect */
     }
 
     .settings-icon {
@@ -1113,6 +1114,60 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         font-size: 20px;
     }
 }
+
+/* For devices with max-width of 480px */
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0;
+        background-color: #050303;
+    }
+
+    .menu-icon {
+        font-size: 20px; /* Slightly smaller menu icon */
+        margin-bottom: 8px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none; /* Initially hidden */
+        padding: 0;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+    }
+
+    .nav-links li {
+        list-style: none;
+        margin: 8px 0; /* Slightly reduced margin for better spacing */
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px; /* Smaller font size for smaller screens */
+        font-weight: 600;
+        text-align: center;
+        transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+        color: #42a5f5;
+    }
+
+    .settings-icon {
+        margin-top: 8px;
+        color: white;
+        font-size: 18px; /* Slightly smaller settings icon */
+    }
+}
+
 
 #Skills {
     background-color: #050303;
