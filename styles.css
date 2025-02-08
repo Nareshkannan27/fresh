@@ -1073,7 +1073,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         display: none;
         flex-direction: column;
         width: 100%;
-        text-align: center;
+        text-align: right;
         background-color: #2b2b3c;
         border-radius: 10px;
         margin-top: 10px;
@@ -1082,10 +1082,28 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     .nav-links.active {
         display: flex;
     }
-
+   
+    .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    
+    }
     .nav-links li {
         padding: 10px 0;
     }
+    .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #42a5f5;
+}
 
     .menu-toggle {
         display: block;
@@ -1114,7 +1132,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
     .nav-links {
         flex-direction: column;
-        align-items: center;
+        align-items: right;
         width: 100%;
         display: none; /* Initially hidden */
         padding: 0;
