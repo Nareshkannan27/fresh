@@ -1090,6 +1090,19 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     .settings-icon {
         margin-top: 10px;
     }
+    .nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px; /* Slightly larger font for better readability */
+    font-weight: 600; /* Keep bold text */
+    text-align: center; /* Center the text */
+    margin: 0; /* Reset margin */
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #42a5f5; /* Highlight effect remains the same */
+  }
 }
 #Skills {
     background-color: #050303;
