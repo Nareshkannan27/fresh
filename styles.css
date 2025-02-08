@@ -1057,53 +1057,63 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     align-items:right ; /* Adds space between menu items */
 }
 
+
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
         align-items: center;
         width: 100%;
         text-align: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        display: none; /* Initially hidden for mobile */
-    }
-
-    .nav-links.show {
-        display: flex; /* Show when toggled */
-    }
-
-    .nav-links li {
-        margin: 10px 0;
+        padding: 10px 0; /* Add some vertical padding */
+        background-color: #050303; /* Ensure consistent background */
     }
 
     .menu-icon {
-        display: block;
+        display: block; /* Show menu icon on mobile */
         font-size: 24px;
         cursor: pointer;
         color: white;
+        margin-bottom: 10px; /* Add spacing below the icon */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+        width: 100%;
+        display: none; /* Hidden by default */
+        padding: 0; /* Reset padding */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+    }
+
+    .nav-links li {
+        list-style: none; /* Remove bullet points */
+        margin: 10px 0; /* Add vertical spacing between links */
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 18px; /* Slightly larger font for better readability */
+        font-weight: 600;
+        text-align: center; /* Center-align text */
+        transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+        color: #42a5f5; /* Highlight effect on hover */
     }
 
     .settings-icon {
         margin-top: 10px;
+        color: white;
+        font-size: 20px;
     }
-    .nav-links li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px; /* Slightly larger font for better readability */
-    font-weight: 600; /* Keep bold text */
-    text-align: center; /* Center the text */
-    margin: 0; /* Reset margin */
-    transition: color 0.3s;
-  }
-
-  .nav-links a:hover {
-    color: #42a5f5; /* Highlight effect remains the same */
-  }
 }
+
 #Skills {
     background-color: #050303;
     border-radius: 30px;
